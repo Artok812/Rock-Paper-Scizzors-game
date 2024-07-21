@@ -7,16 +7,11 @@ class rps {
         int compValue;
         int compScore = 0, userScore = 0;
         boolean endGame = true;
-
         while (endGame) {
             System.out.print("Choose:\n1 for rock\n2 for paper\n3 for scissors\n4 to end game\n");
-
             String input = sc.next();
-
-            // Check if the input is an integer
             if (input.matches("\\d+")) {
                 int n = Integer.parseInt(input);
-
                 if (n < 1 || n > 4) {
                     System.out.print("Choose a number between 1, 2, 3, and 4.\n");
                     continue;
@@ -25,7 +20,6 @@ class rps {
                     endGame = false;
                     break;
                 }
-
                 compValue = 1 + r.nextInt(3);
                 switch (n) {
                     case 1:
@@ -78,7 +72,6 @@ class rps {
                 System.out.print("Invalid input. Please enter a number between 1 and 4.\n");
             }
         }
-
         System.out.print("Final score is:\nUser: " + userScore + "\nComputer: " + compScore + "\n");
         if (userScore > compScore) {
             System.out.println("USER WINS!!!");
