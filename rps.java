@@ -6,9 +6,9 @@ class rps {
         Random r = new Random();
         int compValue;
         int compScore = 0, userScore = 0;
-        boolean b1 = true;
+        boolean endGame = true;
 
-        while (b1) {
+        while (endGame) {
             System.out.print("Choose:\n1 for rock\n2 for paper\n3 for scissors\n4 to end game\n");
 
             String input = sc.next();
@@ -22,7 +22,7 @@ class rps {
                     continue;
                 }
                 if (n == 4) {
-                    b1 = false;
+                    endGame = false;
                     break;
                 }
 
